@@ -1,3 +1,4 @@
+// Online C compiler to run C program online
 #include <stdio.h>
 #include <stdlib.h>
 #define MAXQUEUE 10
@@ -7,6 +8,14 @@ struct queue{
     int front;
     int rear;
 };
+
+int isEmpty(struct queue *q){
+    if(q->rear == q->front){
+        return 1;
+    }else{
+        return 0;
+    }
+}
 
 void enqueue(struct queue *q, int item){
     // Check if queue is full
@@ -22,12 +31,18 @@ void enqueue(struct queue *q, int item){
 
 int dequeue(struct queue *q){
     // Check if queue is empty
-    if(q->front > q->rear){
+    if(isEmpty(q)){
         printf("Queue is empty \n");
         exit(1);
     }
+    
+    if(q->front==MAXQUEUE-1){
+        q->front = 0;
+    }else{
+        q->front++;
+    }
+    
     int item = q->items[q->front];
-    q->front++;
     return item;
 }
 
@@ -42,8 +57,7 @@ void display(struct queue *q){
 int main() {
     
     struct queue *q = (struct queue*)malloc(sizeof(struct queue));
-    q->rear = -1;
-    q->front = 0;
+    q->front = q->rear = MAXQUEUE-1;
     
     int loop = 1;
     
