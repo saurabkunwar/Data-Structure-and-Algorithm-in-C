@@ -29,8 +29,15 @@ void reverseUsingIteration(){
     head = prev;
 }
 
-void reverseUsingRecursion(){
-    
+void reverseUsingRecursion(struct Node* p){
+    if(p->next == NULL){
+        head = p;
+        return;
+    }
+    reverseUsingRecursion(p->next);
+    struct Node* q = p->next;
+    q->next = p;
+    q->next = NULL;
 }
 
 void display(){
