@@ -12,16 +12,9 @@ A specified location that can be used to store and arrange data is called a data
 6. Reversing Linked List
 7. Implementing Stack using Linked List
 8. Implementing Binary Search Tree
-
-## Motivation
-
-Data structure and algorithms were always a fascinating topic for me. College course inspired me to implement various data structure and corresponding algorithms.
+9. Tower of Hanoi
 
 ## Technical Aspect
 
 Used C for implementing data structures.
 Techniques like recurssion are used to solve binary search tree.
-
-## Personal Note
-
-I really enjoyed implementing various algorithms. When trying to figure out how to implement various data structure, it was like a puzzle to me. A beautiful game !!
