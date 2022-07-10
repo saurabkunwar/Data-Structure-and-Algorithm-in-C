@@ -4,13 +4,13 @@ void move(char f, char t){
     printf("Move disc from %c to %c \n", f, t);
 }
 
-void hanoi(int n, char f, char h, char t){
+void hanoi(int n, char from, char middle, char to){
     if(n==0){
         return;
     }
-    hanoi(n-1, f, t, h);
-    move(f, t);
-    hanoi(n-1, h, f, t);
+    hanoi(n-1, from, to, middle);
+    move(from, to);
+    hanoi(n-1, middle, from, to);
 }
 
 int main() {
