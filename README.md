@@ -16,5 +16,4 @@ A specified location that can be used to store and arrange data is called a data
 
 ## Technical Aspect
 
-Used C for implementing data structures.
-Techniques like recurssion are used to solve binary search tree.
+Used C for implementing various data structures and algorithms.
